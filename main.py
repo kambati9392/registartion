@@ -34,12 +34,11 @@ class PersonDetails:
             print("Enter valid mobile number")
         
         #password
-
         #if re.match(r'(?=.*[A-Z])([a-z0-9@#$*&]){8,}$',self.password):
-        if re.match(r'^(?=.*[A-Z])[a-zA-Z0-9@#$*&]{8,}$',self.password):
+        if re.match(r'^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9@#$*&]{8,}$',self.password):
             print(f'your password is :{self.password}')
         else:
-            print("invalid password enter againn.")
+            print("invalid password enter again.")
 
-obj=PersonDetails("Ram","Reddy","abc.xyzzzxxxx@bl.co.in","91 9392540901","M@ram123456")
+obj=PersonDetails("Ram","Reddy","abc.xyzzzxxxx@bl.co.in","91 9392540901","M@ramasde1")
 obj.rgex()
