@@ -1,9 +1,12 @@
+
+
 import re
 class PersonDetails:
-    def __init__(self,first_name,last_name,email):
+    def __init__(self,first_name,last_name,email,mobile_no):
         self.first_name=first_name
         self.last_name=last_name
         self.email=email
+        self.mobile_no=mobile_no
     def rgex(self):
         #first_name
         if re.match(r'^[A-Z][a-zA-Z]{2,}$',self.first_name):
@@ -22,6 +25,12 @@ class PersonDetails:
             print(f'your email:{self.email}')
         else:
             print("your email is not valid ,, enter again")
+        
+        #mobile_no
+        if re.match(r'[0-9]{2} [0-9]{10}$',self.mobile_no):
+            print(f'your mobile_no is : {self.mobile_no}')
+        else:
+            print("Enter valid mobile number")
 
-obj=PersonDetails("Ram","Reddy","abc.xyzzzxxxx@bl.co.in")
+obj=PersonDetails("Ram","Reddy","abc.xyzzzxxxx@bl.co.in","91 9392540901")
 obj.rgex()
