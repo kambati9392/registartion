@@ -39,7 +39,7 @@ class PersonDetails:
         if re.match(r'^(?=.*[A-Z])[a-zA-Z0-9@#$*&]{8,}$',self.password):
             print(f'your password is :{self.password}')
         else:
-            print("invalid password enter again.")
+            print("invalid password enter againn.")
 
 obj=PersonDetails("Ram","Reddy","abc.xyzzzxxxx@bl.co.in","91 9392540901","M@ram123456")
 obj.rgex()
